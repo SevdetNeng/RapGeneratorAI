@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onboardingThirdFragment">
+
+    <fragment
+        android:id="@+id/onboardingFirstFragment"
+        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingFirstFragment"
+        android:label="fragment_onboarding_first"
+        tools:layout="@layout/fragment_onboarding_first" />
+    <fragment
+        android:id="@+id/onboardingSecondFragment"
+        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingSecondFragment"
+        android:label="fragment_onboarding_second"
+        tools:layout="@layout/fragment_onboarding_second" />
+    <fragment
+        android:id="@+id/onboardingThirdFragment"
+        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingThirdFragment"
+        android:label="fragment_onboarding_third"
+        tools:layout="@layout/fragment_onboarding_third" />
+</navigation>
