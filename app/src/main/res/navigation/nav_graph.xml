@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onboardingThirdFragment">
+    app:startDestination="@id/onboardingFirstFragment">
 
     <fragment
         android:id="@+id/onboardingFirstFragment"
@@ -20,4 +20,18 @@
         android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingThirdFragment"
         android:label="fragment_onboarding_third"
         tools:layout="@layout/fragment_onboarding_third" />
+    <fragment
+        android:id="@+id/onboardingFourthFragment"
+        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingFourthFragment"
+        android:label="fragment_onboarding_fourth"
+        tools:layout="@layout/fragment_onboarding_fourth" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sevdetneng.rapgeneratorai.ui.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/promptFragment"
+        android:name="com.sevdetneng.rapgeneratorai.ui.prompt.PromptFragment"
+        android:label="fragment_prompt"
+        tools:layout="@layout/fragment_prompt" />
 </navigation>

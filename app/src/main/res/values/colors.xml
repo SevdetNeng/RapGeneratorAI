@@ -5,5 +5,8 @@
     <color name="button_gradient_start">#F35C70</color>
     <color name="button_gradient_center">#E54157</color>
     <color name="button_gradient_end">#DC2D96</color>
+    <color name="home_secondary_text">#A9A9A9</color>
+    <color name="prompt_edittext_border">#41B2B2B2</color>
+    <color name="inactive_button">#292929</color>
 
 </resources>

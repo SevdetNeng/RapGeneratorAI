@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.sevdetneng.rapgeneratorai.R
 import com.sevdetneng.rapgeneratorai.base.BaseFragment
 import com.sevdetneng.rapgeneratorai.databinding.FragmentOnboardingFourthBinding
@@ -13,12 +14,11 @@ import com.sevdetneng.rapgeneratorai.databinding.FragmentOnboardingFourthBinding
 class OnboardingFourthFragment : BaseFragment<FragmentOnboardingFourthBinding>(FragmentOnboardingFourthBinding::inflate) {
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding_fourth, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.onboardingFourthNext.setOnClickListener {
+            findNavController().navigate(R.id.homeFragment)
+        }
     }
 
 

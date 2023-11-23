@@ -2,7 +2,7 @@
     <string name="app_name">RapGeneratorAI</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name ="onboarding_first_title">Infinite Lyric Possibilites Await </string>
+    <string name="onboarding_first_title">Infinite Lyric Possibilites Await </string>
     <string name="onboarding_first_content">Generate unique rap verses with ease, and let your friends marvel at your lyrical creativity.</string>
     <string name="next_button">Next</string>
     <string name="onboarding_second_title">Choose Your Dream Rap Rapper</string>
@@ -11,4 +11,11 @@
     <string name="onboarding_third_content">Explore diverse beats to complement your lyrics, producing catchy tracks that get your friends grooving.</string>
     <string name="onboarding_fourth_title">Share Your Rap Flair, Ignite Social Media</string>
     <string name="onboarding_fourth_content">Showcase your original rap creations on social media, captivating friends and followers with your undeniable talent.</string>
+    <string name="home_start_text">Start Here</string>
+    <string name="home_generate_text">Generate a rap song</string>
+    <string name="home_screen_title">Rap Generator</string>
+    <string name="prompt_screen_title">Prompt</string>
+    <string name="prompt_screen_hint">Type your prompts</string>
+    <string name="dummy_prompt">A diss about my friend Jamie who is spending too much time with his dog</string>
+    <string name="button_continue">Continue</string>
 </resources>
