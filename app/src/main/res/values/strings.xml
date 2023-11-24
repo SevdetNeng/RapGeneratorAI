@@ -18,4 +18,9 @@
     <string name="prompt_screen_hint">Type your prompts</string>
     <string name="dummy_prompt">A diss about my friend Jamie who is spending too much time with his dog</string>
     <string name="button_continue">Continue</string>
+    <string name="generating_lyrics_title">Generating Lyrics</string>
+    <string name="generating_lyrics_info">Just a little while...</string>
+    <string name="generating_lyrics_processing">Processing</string>
+    <string name="edit_lyrics_title">Edit Lyrics</string>
+    <string name="save_button">Save</string>
 </resources>

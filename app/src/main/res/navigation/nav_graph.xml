@@ -7,31 +7,71 @@
 
     <fragment
         android:id="@+id/onboardingFirstFragment"
-        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingFirstFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingFirstFragment"
         android:label="fragment_onboarding_first"
         tools:layout="@layout/fragment_onboarding_first" />
     <fragment
         android:id="@+id/onboardingSecondFragment"
-        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingSecondFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingSecondFragment"
         android:label="fragment_onboarding_second"
         tools:layout="@layout/fragment_onboarding_second" />
     <fragment
         android:id="@+id/onboardingThirdFragment"
-        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingThirdFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingThirdFragment"
         android:label="fragment_onboarding_third"
         tools:layout="@layout/fragment_onboarding_third" />
     <fragment
         android:id="@+id/onboardingFourthFragment"
-        android:name="com.sevdetneng.rapgeneratorai.ui.onboarding.OnboardingFourthFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingFourthFragment"
         android:label="fragment_onboarding_fourth"
         tools:layout="@layout/fragment_onboarding_fourth" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sevdetneng.rapgeneratorai.ui.home.HomeFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.home.HomeFragment"
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/promptFragment"
-        android:name="com.sevdetneng.rapgeneratorai.ui.prompt.PromptFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.prompt.PromptFragment"
         android:label="fragment_prompt"
-        tools:layout="@layout/fragment_prompt" />
+        tools:layout="@layout/fragment_prompt" >
+        <action
+            android:id="@+id/action_promptFragment_to_generatingLyrics"
+            app:destination="@id/generatingLyrics" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatingLyrics"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.lyrics.generating.GeneratingLyricsFragment"
+        android:label="fragment_generating_lyrics"
+        tools:layout="@layout/fragment_generating_lyrics" >
+        <argument
+            android:name="prompt"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_generatingLyrics_to_generatedLyricsFragment"
+            app:destination="@id/generatedLyricsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/generatedLyricsFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.lyrics.generated.GeneratedLyricsFragment"
+        android:label="fragment_generated_lyrics"
+        tools:layout="@layout/fragment_generated_lyrics" >
+        <argument
+            android:name="lyrics"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_generatedLyricsFragment_to_editLyricsFragment"
+            app:destination="@id/editLyricsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editLyricsFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.lyrics.EditLyricsFragment"
+        android:label="fragment_edit_lyrics"
+        tools:layout="@layout/fragment_edit_lyrics" >
+        <argument
+            android:name="lyrics"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_editLyricsFragment_to_generatedLyricsFragment"
+            app:destination="@id/generatedLyricsFragment" />
+    </fragment>
 </navigation>

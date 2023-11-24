@@ -1,9 +1,7 @@
 package com.sevdetneng.rapgeneratorai.util
 
-import android.content.res.loader.ResourcesProvider
-import com.sevdetneng.rapgeneratorai.R
-import com.sevdetneng.rapgeneratorai.model.data.Category
-import com.sevdetneng.rapgeneratorai.model.data.Prompt
+import com.sevdetneng.rapgeneratorai.domain.model.local.Category
+import com.sevdetneng.rapgeneratorai.domain.model.local.Prompt
 
 object DummyData {
     val categories : List<Category> = listOf(
