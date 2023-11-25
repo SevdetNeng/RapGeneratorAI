@@ -23,4 +23,5 @@
     <string name="generating_lyrics_processing">Processing</string>
     <string name="edit_lyrics_title">Edit Lyrics</string>
     <string name="save_button">Save</string>
+    <string name="beat_screen_title">Select Beat</string>
 </resources>

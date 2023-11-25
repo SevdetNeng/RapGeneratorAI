@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onboardingFirstFragment">
+    app:startDestination="@id/beatFragment">
 
     <fragment
         android:id="@+id/onboardingFirstFragment"
@@ -74,4 +74,9 @@
             android:id="@+id/action_editLyricsFragment_to_generatedLyricsFragment"
             app:destination="@id/generatedLyricsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/beatFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.beats.BeatFragment"
+        android:label="fragment_beat"
+        tools:layout="@layout/fragment_beat" />
 </navigation>

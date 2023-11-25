@@ -16,7 +16,6 @@ class CategoriesItemDecoration(private val spaceSize: Int) : RecyclerView.ItemDe
             }
             left = spaceSize
             right = spaceSize
-            //bottom = spaceSize
         }
     }
 }

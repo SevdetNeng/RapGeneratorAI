@@ -2,6 +2,7 @@ package com.sevdetneng.rapgeneratorai.domain.di
 
 import com.google.gson.Gson
 import com.sevdetneng.rapgeneratorai.data.network.GptApi
+import com.sevdetneng.rapgeneratorai.data.network.UberduckApi
 import com.sevdetneng.rapgeneratorai.util.Constants
 import dagger.Module
 import dagger.Provides
@@ -42,5 +43,16 @@ object NetworkModule {
             .client(client)
             .build()
             .create(GptApi::class.java)
+    }
+
+    @Provides
+    @Singleton
+    fun provideUberduckApi(client: OkHttpClient) : UberduckApi {
+        return Retrofit.Builder()
+            .baseUrl(Constants.UBERDUCK_BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client)
+            .build()
+            .create(UberduckApi::class.java)
     }
 }
