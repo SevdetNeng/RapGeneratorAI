@@ -21,7 +21,7 @@ class GptRepositoryImpl @Inject constructor(private val gptApi : GptApi) : GptRe
             val request = GptPostRequest(
                 Constants.GPT_MODEL,
                 prompt = "2 verse long "+prompt,
-                max_tokens = Constants.MAX_TOKENS
+                max_tokens = Constants.MAX_TOKENS,
             )
             val response = gptApi.postPrompt(request)
             trySend(NetworkResponse.Loading)

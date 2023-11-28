@@ -76,6 +76,9 @@ class PromptFragment : BaseFragment<FragmentPromptBinding>(FragmentPromptBinding
                 binding.continueButton.isSelected = it
             }
         }
+        binding.btnBack.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
     }
 

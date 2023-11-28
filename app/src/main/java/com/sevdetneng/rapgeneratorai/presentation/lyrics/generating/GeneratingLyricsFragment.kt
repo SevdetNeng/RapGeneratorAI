@@ -2,10 +2,12 @@ package com.sevdetneng.rapgeneratorai.presentation.lyrics.generating
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.sevdetneng.rapgeneratorai.R
 import com.sevdetneng.rapgeneratorai.base.BaseFragment
 import com.sevdetneng.rapgeneratorai.databinding.FragmentGeneratingLyricsBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,10 +26,23 @@ class GeneratingLyricsFragment : BaseFragment<FragmentGeneratingLyricsBinding>(F
         viewLifecycleOwner.lifecycleScope.launch {
             generateLyricsViewModel.isLoading.collect(){
                 if(!it){
-                    findNavController().navigate(GeneratingLyricsFragmentDirections.actionGeneratingLyricsToGeneratedLyricsFragment(
-                        generateLyricsViewModel.gptCompletion.value.trim()
-                    ))
+                    if(generateLyricsViewModel.isError.value){
+                        Toast.makeText(requireContext(),"timeout",Toast.LENGTH_LONG).show()
+                    }else{
+                        findNavController().navigate(GeneratingLyricsFragmentDirections.actionGeneratingLyricsToGeneratedLyricsFragment(
+                            generateLyricsViewModel.gptCompletion.value.trim()
+                        ))
+                    }
+
                 }
+            }
+        }
+
+        binding.backButton.setOnClickListener {
+            if(generateLyricsViewModel.isLoading.value){
+                findNavController().popBackStack()
+            }else{
+                findNavController().navigate(R.id.promptFragment)
             }
         }
 

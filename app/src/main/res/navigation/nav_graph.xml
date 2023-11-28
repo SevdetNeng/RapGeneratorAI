@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/beatFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/onboardingFirstFragment"
@@ -78,5 +78,32 @@
         android:id="@+id/beatFragment"
         android:name="com.sevdetneng.rapgeneratorai.presentation.beats.BeatFragment"
         android:label="fragment_beat"
-        tools:layout="@layout/fragment_beat" />
+        tools:layout="@layout/fragment_beat" >
+        <argument
+            android:name="lyrics"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/rapperFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.rapper.RapperFragment"
+        android:label="fragment_rapper"
+        tools:layout="@layout/fragment_rapper" />
+    <fragment
+        android:id="@+id/generatingRapFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.generating.GeneratingRapFragment"
+        android:label="fragment_generating_rap"
+        tools:layout="@layout/fragment_generating_rap" >
+        <action
+            android:id="@+id/action_generatingRapFragment_to_songFragment"
+            app:destination="@id/songFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/songFragment"
+        android:name="com.sevdetneng.rapgeneratorai.presentation.song.SongFragment"
+        android:label="fragment_song"
+        tools:layout="@layout/fragment_song" >
+        <argument
+            android:name="Song"
+            app:argType="com.sevdetneng.rapgeneratorai.domain.model.local.Song" />
+    </fragment>
 </navigation>

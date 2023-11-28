@@ -24,6 +24,12 @@ class BeatViewModel @Inject constructor(
     private val _beats : MutableStateFlow<Beats> = MutableStateFlow(Beats())
     val beats : StateFlow<Beats> = _beats
 
+    private val _isPlaying : MutableStateFlow<Boolean> = MutableStateFlow(false)
+    val isPlaying : StateFlow<Boolean> = _isPlaying
+
+    private val _playingBeatIndex : MutableStateFlow<Int> = MutableStateFlow(-1)
+    val playingBeatIndex : StateFlow<Int> = _playingBeatIndex
+
     init {
         getBeats()
     }
@@ -47,5 +53,13 @@ class BeatViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+    fun setIsPlaying(isPlaying : Boolean) {
+        _isPlaying.value = isPlaying
+    }
+
+    fun setPlayingIndex(index : Int){
+        _playingBeatIndex.value = index
     }
 }

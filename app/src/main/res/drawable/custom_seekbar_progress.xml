@@ -1,0 +1,41 @@
+<!-- res/drawable/custom_seekbar.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background -->
+    <item>
+        <shape>
+            <solid android:color="#000000"/> <!-- Gray background color -->
+            <corners android:radius="8dp"/> <!-- Rounded corners, adjust as needed -->
+            <size android:height="8dp"/>
+            <stroke android:color="@color/white"
+                android:width="3dp"/>
+        </shape>
+    </item>
+    <!-- Secondary Progress (Black) -->
+    <item android:id="@android:id/background">
+        <clip>
+            <shape>
+                <solid android:color="#000000"/> <!-- Black color for secondary progress -->
+                <corners android:radius="8dp"/> <!-- Rounded corners, adjust as needed -->
+                <size android:height="8dp"/>
+            </shape>
+        </clip>
+    </item>
+    <!-- Primary Progress (Gradient) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <scale android:scaleWidth="100%">
+                <shape>
+                    <gradient
+                        android:startColor="@color/button_gradient_start"
+                        android:centerColor="@color/button_gradient_center"
+                    android:endColor="@color/button_gradient_end"
+                    android:angle="0"/>          <!-- Angle of the gradient (0 means left to right) -->
+                    <corners android:radius="8dp"/>
+                    <size android:height="8dp"/>
+                    <stroke android:width="2dp"
+                        android:color="@color/white"/> <!-- Rounded corners, adjust as needed -->
+                </shape>
+            </scale>
+        </clip>
+    </item>
+</layer-list>

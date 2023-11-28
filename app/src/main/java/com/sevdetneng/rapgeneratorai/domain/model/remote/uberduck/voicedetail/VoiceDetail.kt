@@ -1,0 +1,33 @@
+package com.sevdetneng.rapgeneratorai.domain.model.remote.uberduck.voicedetail
+
+data class VoiceDetail(
+    val accent: Any,
+    val added_at: Double,
+    val age: Any,
+    val architecture: String,
+    val category: String,
+    val contributors: List<Any>,
+    val controls: Any,
+    val description: Any,
+    val display_name: String,
+    val features: List<String>,
+    val gender: Any,
+    val hifi_gan_vocoder: Any,
+    val image_url: Any,
+    val images: Any,
+    val is_active: Boolean,
+    val is_primary: Any,
+    val is_private: Boolean,
+    val language: String,
+    val memberships: Any,
+    val ml_model_id: Any,
+    val mood: Any,
+    val name: String,
+    val samples: List<Sample>,
+    val speaker_id: Any,
+    val style: Any,
+    val symbol_set: String,
+    val tags: Any,
+    val voice_actor: String,
+    val voicemodel_uuid: String
+)

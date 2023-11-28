@@ -24,4 +24,7 @@
     <string name="edit_lyrics_title">Edit Lyrics</string>
     <string name="save_button">Save</string>
     <string name="beat_screen_title">Select Beat</string>
+    <string name="rapper_screen_title">Rapper</string>
+    <string name="generating_rap_title">Generating Song</string>
+    <string name="generating_rap_description">Please wait while we are generating your song</string>
 </resources>

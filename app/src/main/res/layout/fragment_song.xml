@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.song.SongFragment">
+
+
+    <ImageView
+        android:id="@+id/songRapperImg"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:foreground="@drawable/transparent_img_overlay"
+        android:scaleType="centerCrop"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:src="@drawable/img_rapper6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/songSongTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/poppinslight"
+        android:gravity="center"
+        android:text="King of the Hustle"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songRapperImg" />
+
+    <TextView
+        android:id="@+id/songRapperNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppinsbold"
+        android:text="Humble Rhymer"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songSongTitle" />
+
+    <SeekBar
+        android:id="@+id/songSeekbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="6dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:progress="50"
+        android:progressDrawable="@drawable/custom_seekbar_progress"
+        android:splitTrack="false"
+        android:thumb="@drawable/custom_seekbar_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songRapperNameText" />
+
+    <TextView
+        android:id="@+id/songCurrenTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppinslight"
+        android:text="00:33"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songSeekbar" />
+
+    <TextView
+        android:id="@+id/songDurationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppinslight"
+        android:text="1:24"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songSeekbar" />
+
+    <ImageView
+        android:id="@+id/buttonPlayPauseSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/btn_playsong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songDurationText" />
+
+    <ImageView
+        android:id="@+id/buttonBackwards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_backsong"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPlayPauseSong"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlayPauseSong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonPlayPauseSong" />
+
+    <ImageView
+        android:id="@+id/buttonForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_forwardsong"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonPlayPauseSong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlayPauseSong"
+        app:layout_constraintTop_toTopOf="@+id/buttonPlayPauseSong" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSaveSong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/custom_gradient_button"
+        android:fontFamily="@font/poppinslight"
+        android:padding="12dp"
+        android:text="Share"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/songBtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/song_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

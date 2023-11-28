@@ -20,7 +20,11 @@ class GenerateLyricsViewModel @Inject constructor(private val postPromptUseCase 
     private val _isLoading : MutableStateFlow<Boolean> = MutableStateFlow(true)
     val isLoading : StateFlow<Boolean> = _isLoading
 
+    private val _isError : MutableStateFlow<Boolean> = MutableStateFlow(false)
+    val isError : StateFlow<Boolean> = _isError
+
     fun postPrompt(prompt : String){
+        _isError.value = false
         viewModelScope.launch {
             postPromptUseCase(prompt).collect(){ response ->
                 when(response.status){
@@ -36,6 +40,8 @@ class GenerateLyricsViewModel @Inject constructor(private val postPromptUseCase 
                     }
                     else -> {
                         Log.d("Gpt Exc",response.message.toString())
+                        _isError.value = true
+                        _isLoading.value = false
                     }
                 }
             }

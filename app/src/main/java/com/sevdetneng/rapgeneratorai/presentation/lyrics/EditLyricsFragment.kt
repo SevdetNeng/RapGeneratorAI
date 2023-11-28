@@ -26,6 +26,9 @@ class EditLyricsFragment : BaseFragment<FragmentEditLyricsBinding>(FragmentEditL
         binding.buttonSave.setOnClickListener {
             findNavController().navigate(EditLyricsFragmentDirections.actionEditLyricsFragmentToGeneratedLyricsFragment(_changedText))
         }
+        binding.backButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
     }
 }
