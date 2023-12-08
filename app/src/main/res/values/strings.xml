@@ -27,4 +27,10 @@
     <string name="rapper_screen_title">Rapper</string>
     <string name="generating_rap_title">Generating Song</string>
     <string name="generating_rap_description">Please wait while we are generating your song</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="restore_purchase">Restore Purchase</string>
+    <string name="help_text">Help</string>
+    <string name="settings_screen_title">Settings</string>
 </resources>

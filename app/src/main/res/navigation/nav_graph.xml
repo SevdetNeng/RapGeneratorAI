@@ -3,46 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/onboardingFirstFragment">
 
     <fragment
         android:id="@+id/onboardingFirstFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingFirstFragment"
+        android:name="com.okation.aivideocreator.presentation.onboarding.OnboardingFirstFragment"
         android:label="fragment_onboarding_first"
         tools:layout="@layout/fragment_onboarding_first" />
     <fragment
         android:id="@+id/onboardingSecondFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingSecondFragment"
+        android:name="com.okation.aivideocreator.presentation.onboarding.OnboardingSecondFragment"
         android:label="fragment_onboarding_second"
         tools:layout="@layout/fragment_onboarding_second" />
     <fragment
         android:id="@+id/onboardingThirdFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingThirdFragment"
+        android:name="com.okation.aivideocreator.presentation.onboarding.OnboardingThirdFragment"
         android:label="fragment_onboarding_third"
         tools:layout="@layout/fragment_onboarding_third" />
     <fragment
         android:id="@+id/onboardingFourthFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.onboarding.OnboardingFourthFragment"
+        android:name="com.okation.aivideocreator.presentation.onboarding.OnboardingFourthFragment"
         android:label="fragment_onboarding_fourth"
         tools:layout="@layout/fragment_onboarding_fourth" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.home.HomeFragment"
+        android:name="com.okation.aivideocreator.presentation.home.HomeFragment"
         android:label="HomeFragment" />
     <fragment
         android:id="@+id/promptFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.prompt.PromptFragment"
+        android:name="com.okation.aivideocreator.presentation.prompt.PromptFragment"
         android:label="fragment_prompt"
-        tools:layout="@layout/fragment_prompt" >
+        tools:layout="@layout/fragment_prompt">
         <action
             android:id="@+id/action_promptFragment_to_generatingLyrics"
             app:destination="@id/generatingLyrics" />
     </fragment>
     <fragment
         android:id="@+id/generatingLyrics"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.lyrics.generating.GeneratingLyricsFragment"
+        android:name="com.okation.aivideocreator.presentation.lyrics.generating.GeneratingLyricsFragment"
         android:label="fragment_generating_lyrics"
-        tools:layout="@layout/fragment_generating_lyrics" >
+        tools:layout="@layout/fragment_generating_lyrics">
         <argument
             android:name="prompt"
             app:argType="string" />
@@ -52,9 +52,9 @@
     </fragment>
     <fragment
         android:id="@+id/generatedLyricsFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.lyrics.generated.GeneratedLyricsFragment"
+        android:name="com.okation.aivideocreator.presentation.lyrics.generated.GeneratedLyricsFragment"
         android:label="fragment_generated_lyrics"
-        tools:layout="@layout/fragment_generated_lyrics" >
+        tools:layout="@layout/fragment_generated_lyrics">
         <argument
             android:name="lyrics"
             app:argType="string" />
@@ -64,9 +64,9 @@
     </fragment>
     <fragment
         android:id="@+id/editLyricsFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.lyrics.EditLyricsFragment"
+        android:name="com.okation.aivideocreator.presentation.lyrics.EditLyricsFragment"
         android:label="fragment_edit_lyrics"
-        tools:layout="@layout/fragment_edit_lyrics" >
+        tools:layout="@layout/fragment_edit_lyrics">
         <argument
             android:name="lyrics"
             app:argType="string" />
@@ -76,34 +76,49 @@
     </fragment>
     <fragment
         android:id="@+id/beatFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.beats.BeatFragment"
+        android:name="com.okation.aivideocreator.presentation.beats.BeatFragment"
         android:label="fragment_beat"
-        tools:layout="@layout/fragment_beat" >
+        tools:layout="@layout/fragment_beat">
         <argument
             android:name="lyrics"
             app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/rapperFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.rapper.RapperFragment"
+        android:name="com.okation.aivideocreator.presentation.rapper.RapperFragment"
         android:label="fragment_rapper"
         tools:layout="@layout/fragment_rapper" />
     <fragment
         android:id="@+id/generatingRapFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.generating.GeneratingRapFragment"
+        android:name="com.okation.aivideocreator.presentation.generating.GeneratingRapFragment"
         android:label="fragment_generating_rap"
-        tools:layout="@layout/fragment_generating_rap" >
+        tools:layout="@layout/fragment_generating_rap">
         <action
             android:id="@+id/action_generatingRapFragment_to_songFragment"
             app:destination="@id/songFragment" />
     </fragment>
     <fragment
         android:id="@+id/songFragment"
-        android:name="com.sevdetneng.rapgeneratorai.presentation.song.SongFragment"
+        android:name="com.okation.aivideocreator.presentation.song.SongFragment"
         android:label="fragment_song"
-        tools:layout="@layout/fragment_song" >
+        tools:layout="@layout/fragment_song">
         <argument
             android:name="Song"
-            app:argType="com.sevdetneng.rapgeneratorai.domain.model.local.Song" />
+            app:argType="com.okation.aivideocreator.domain.model.local.Song" />
+        <action
+            android:id="@+id/action_songFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.okation.aivideocreator.presentation.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/inAppFragment"
+        android:name="com.okation.aivideocreator.presentation.inapp.InAppFragment"
+        android:label="fragment_in_app"
+        tools:layout="@layout/fragment_in_app" />
 </navigation>

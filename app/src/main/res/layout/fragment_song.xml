@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.song.SongFragment">
+    tools:context=".presentation.song.SongFragment"
+    android:background="@color/screen_bg_color">
 
 
     <ImageView
@@ -54,12 +55,8 @@
         android:id="@+id/songSeekbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
         android:minHeight="6dp"
-        android:paddingStart="0dp"
-        android:paddingEnd="0dp"
         android:progress="50"
         android:progressDrawable="@drawable/custom_seekbar_progress"
         android:splitTrack="false"
@@ -134,7 +131,7 @@
         android:background="@drawable/custom_gradient_button"
         android:fontFamily="@font/poppinslight"
         android:padding="12dp"
-        android:text="Share"
+        android:text="@string/save_button"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="21sp"
@@ -147,8 +144,8 @@
         android:id="@+id/songBtnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/song_btn_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

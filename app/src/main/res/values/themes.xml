@@ -1,9 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.RapGeneratorAI" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimaryDark">@color/screen_bg_color</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="Theme.RapGeneratorAI" parent="Base.Theme.RapGeneratorAI" />
+
+    <style name="AlertDialogCustom" parent="@android:style/Theme.Material.Dialog">
+        <item name="android:textColor">@color/alert_delete_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:headerDividersEnabled">true</item>
+        <item name="android:background">@color/android_alert_color</item>
+    </style>
 </resources>

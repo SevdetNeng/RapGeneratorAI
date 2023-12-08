@@ -4,7 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.home.HomeFragment">
+    tools:context=".presentation.home.HomeFragment"
+    android:background="@color/screen_bg_color">
+
+    <ImageView
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/btn_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/homeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/poppinsbold"
+        android:gravity="center"
+        android:text="@string/home_screen_title"
+        android:textSize="21sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/settingsButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/settingsButton" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/freeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="homeAddButton,startText,textView3" />
 
     <ImageView
         android:id="@+id/homeAddButton"
@@ -56,28 +90,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startText" />
 
-    <ImageView
-        android:id="@+id/imageView3"
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/premiumGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/btn_settings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:visibility="gone"
+        app:constraint_referenced_ids="songsRecycler,floatingActionButton,songsTitleText" />
 
-    <TextView
-        android:id="@+id/homeTitle"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songsRecycler"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginEnd="80dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:gravity="center"
-        android:text="@string/home_screen_title"
-        android:textSize="21sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/songsTitleText" />
+
+    <ImageView
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:src="@drawable/btn_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/songsTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Songs"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

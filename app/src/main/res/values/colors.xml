@@ -8,5 +8,9 @@
     <color name="home_secondary_text">#A9A9A9</color>
     <color name="prompt_edittext_border">#41B2B2B2</color>
     <color name="inactive_button">#292929</color>
+    <color name="status_bar_color">#FFFFFF</color>
+    <color name="screen_bg_color">#fafafa</color>
+    <color name="alert_delete_color">#FF3B30</color>
+    <color name="android_alert_color">#FDFDFD</color>
 
 </resources>
